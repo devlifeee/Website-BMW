@@ -1,0 +1,665 @@
+body { /* убираются отступы */
+    margin: 0;
+    background-color: rgb(10, 10, 10);    
+}
+
+.header_line { /*елементы в 1 строке*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.line { /*полоска*/
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 85px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+.nav {
+  position: absolute;
+  left: 129px;
+  top: 0px;
+  padding: 0px 15px
+}
+
+.nav-item {   /* шрифт */
+  font-family: monospace;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 30px 15px;
+  margin-right: 7px;
+  display: inline-block;
+  transition: color 0.6s linear;
+}
+
+.nav-item:hover {
+color: rgb(154, 197, 223);
+/*color:rgb(175, 221, 240)*/
+}
+
+.header-logo {
+  padding: 12px; /*  отступ от верхнего края*/
+  margin-left: 60px; /* отступ с левого края */
+}
+
+.reg { /*  значок регистрации*/
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  color: #ffffff;
+}
+
+.wrapper { /* Увеличение картинки с машиной  */
+    overflow: hidden;
+}
+
+.wrapper img { /* Время увеличения */
+    transition: scale 400ms;
+}
+  
+.wrapper:hover img { /* Размер увеличения */
+    scale: 110%;
+}
+
+.wrapper-around { /* Увеличение боковых картинок  */
+    overflow: hidden;
+}
+
+.wrapper-around img { /* Время уменьшения */
+    transition: scale 400ms;
+}
+  
+.wrapper-around:hover img { /* Размер уменьшения */
+    scale: 90%;
+}
+
+.text-m3-news {  /* верхний текст */
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 170px;
+    left: 350px;
+    font-size: 60px;
+    color: rgb(89, 160, 113);
+}
+
+.text-m3-news-2 { /* Текст Competition` */
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 220px;
+    left: 350px;
+    font-size: 58px;
+    color: rgb(89, 160, 113);
+}
+.text-m3-news-low {  /* Нижний  текст */
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif ;
+    top: 475px;
+    left: 975px;
+    font-size: 20px;
+    color: rgb(85, 160, 113);
+}
+
+.m3-news { /* Фото зада */
+    position: absolute;
+    top: 212px;
+    left: 970px;
+}
+
+ 
+.m3-news-2 {  /*Фото бампера*/ 
+  position: absolute;
+  top: 190px;
+  left: 90px;    
+}
+
+.m3-center { /* Вся машина*/
+    position: absolute;
+    top: 290px;
+    left: 310px;  
+}
+
+.m2-coupe-face { /* перед машины m2*/
+  position: absolute;
+  top: 600px;
+  left: 40px;
+}
+
+.text-m2-news { /* текст про название */
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 678px;
+    left: 350px;
+    font-size: 60px;
+    color: rgb(144, 143, 148);
+}
+
+.text-m2-news-2 { /* текст снизу названия*/
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 720px;
+    left: 350px;
+    font-size: 58px;
+    color: rgb(144, 143, 148);
+}
+
+.text-m2-news-low { /* текст с годов выпуска*/
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif ;
+    top: 940px;
+    left: 975px;
+    font-size: 20px;
+    color: rgb(144, 143, 148);
+}
+
+h1 { /* Текст "Узнать больше" */
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif ;
+    top: 960px;
+    left: 960px;
+    font-size: 20px;
+    color: rgb(194, 192, 202);
+}
+
+h2 {  /* нижний текст под "Узнать больше" */    
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif ;
+    top: 980px;
+    left: 960px;
+    font-size: 20px;
+    color: rgb(194, 192, 202);
+}
+.m2-news {  /* Картинкас задом bmw m2  */
+    position: absolute;
+    top: 695px;
+    left: 960px;
+}
+
+.m2-center { /* Машина  m2 по центру */
+    position: absolute;
+    top: 460px;
+    left: 185px; 
+}
+
+    /* 3 Машина */
+.m5-1 img { /* Длинная фотка */
+  position: absolute;
+  left: 22px;
+  top: 1200px;
+  width: 1300px;
+  height: 400px;
+}
+
+.m5-2 img { /* Машина целиком первая */
+  position: absolute;
+  left: 22px;
+  top: 1600px;
+  width: 435px;
+  height: 320px;
+}
+
+.m5-3 img { /* Половина  зада машины */
+  position: absolute;
+  left: 455px;
+  top: 1600px;
+  width: 435px;
+  height: 320px;
+}
+
+.m5-4 img { /* Зад машины целиком */
+  position: absolute;
+  left: 890px;
+  top: 1600px;
+  width: 432px;
+  height: 320px;
+}
+
+.text-m5 { /*  Текст "Представлена новая m5" */ 
+  position: absolute;
+  font-family: monospace;
+  font-size: 50px;
+  top: 1920px;
+  left: 22px;
+  color: #ccc;
+}
+
+.text-m5-small { /* Нижний большой текст */
+  position: absolute;
+  font-family: monospace;
+  font-size: 20px;
+  top: 2000px;
+  left: 22px;
+  color: #ccc;
+}
+
+.text-price { /* Текст с ценой */
+  position: absolute;
+  font-family: monospace;
+  font-size: 20px;
+  top: 1930px;
+  left: 1100px;
+  color: #ccc;
+}
+
+        /* 4 Машина */
+.i4-1 img { /* Длинная фотка */
+  position: absolute;
+  left: 22px;
+  top: 2400px;
+  width: 1300px;
+  height: 400px;
+}
+
+.i4-2 img { /* Перед машины */
+  position: absolute;
+  left: 22px;
+  top: 2800px;
+  width: 435px;
+  height: 320px;
+}
+
+.i4-3 img { /* Фото сзади сбоку */
+  position: absolute;
+  left: 455px;
+  top: 2800px;
+  width: 435px;
+  height: 320px;
+}
+
+.i4-4 img { /* Салон и руль */
+  position: absolute;
+  left: 890px;
+  top: 2800px;
+  width: 432px;
+  height: 320px;
+}
+
+.text-i4 {  /*  Текст " Представлена новая i4 " */
+  position: absolute;
+  font-family: monospace;
+  font-size: 50px;
+  top: 3120px;
+  left: 22px;
+  color: #ccc;
+}
+
+.text-i4-small { /* Нижний текст */
+  position: absolute;
+  font-family: monospace;
+  font-size: 20px;
+  top: 3205px;
+  left: 22px;
+  color: #ccc;
+}
+
+.text-price-i4 { /*  Текст с ценой */
+  position: absolute;
+  font-family: monospace;
+  font-size: 20px;
+  top: 3130px;
+  left: 1100px;
+  color: #ccc;
+}
+
+.text-last {
+  position: absolute;
+  font-family: monospace;
+  font-size: 30px;
+  top: 3550px;
+  left: 70px;
+  color: #ffffff;
+}
+
+/* Свойства для всех элементов от 1080 до 1440 */
+@media screen and (min-height: 1000px) and (max-height: 1439px) {
+  .nav-item {
+    font-size: 40px;
+    padding: 20px 15px;
+    margin-right: 7px; 
+  }
+
+  .reg {
+    top: 30px;
+    right: 140px;
+  }
+
+  .m3-news { /* Фото зада */
+    position: absolute;
+    top: 212px;
+    left: 1250px;
+  }
+
+  .m3-news-2 {  /*Фото бампера*/ 
+    position: absolute;
+    top: 190px;
+    left: 375px;    
+  }
+
+  .m3-center { /* Вся машина*/
+    position: absolute;
+    top: 270px;
+    left: 600px;
+      
+  }
+
+  .text-m3-news {  /* верхний текст */
+    top: 170px;
+    left: 635px;
+    
+  }
+
+  .text-m3-news-2 { /* Текст Competition` */
+    top: 220px;
+    left: 635px;
+   
+  }
+
+  .text-m3-news-low {  /* Нижний  текст */
+    top: 475px;
+    left: 1250px;
+  }
+
+         /* ВТОРАЯ МАШИНА*/
+         
+  .m2-coupe-face { /* перед машины m2*/
+    position: absolute;
+    top: 600px;
+    left: 335px;
+  }
+  
+  .text-m2-news { /* текст про название */
+      top: 670px;
+      left: 645px;
+      font-size: 60px;
+  }
+  
+  .text-m2-news-2 { /* текст снизу названия*/
+      top: 720px;
+      left: 645px;
+      font-size: 58px;
+    
+  }
+  
+  .text-m2-news-low { /* текст с годов выпуска*/
+      top: 940px;
+      left: 1270px;
+      font-size: 20px;
+  }
+  
+  h1 { /* Текст "Узнать больше" */
+      top: 960px;
+      left: 1255px;
+      font-size: 20px;
+  }
+  
+  h2 {  /* нижний текст под "Узнать больше" */    
+      top: 980px;
+      left: 1255px;
+      font-size: 20px;
+  }
+  .m2-news {  /* Картинкас задом bmw m2  */
+      top: 695px;
+      left: 1255px;
+  }
+  
+  .m2-center { /* Машина  m2 по центру */
+      top: 460px;
+      left: 480px; 
+  }
+
+        /* 3 Машина */
+  .m5-1 img { /* Длинная фотка */
+    left: 155px;
+    top: 1200px;
+    width: 1600px;
+    height: 500px;
+  }
+
+  .m5-2 img { /* Машина целиком первая */
+    left: 150px;
+    top: 1700px;
+    width: 535px;
+    height: 350px;
+  }
+
+  .m5-3 img { /* Половина  зада машины */
+    left: 685px;
+    top: 1700px;
+    width: 535px;
+    height: 350px;
+  }
+
+  .m5-4 img { /* Зад машины целиком */
+    left: 1220px;
+    top: 1700px;
+    width: 535px;
+    height: 350px;
+  }
+
+  .text-m5 {
+    font-size: 50px;
+    top: 2100px;
+    left: 155px;
+  }
+
+  .text-m5-small {
+    font-size: 20px;
+    top: 2150px;
+    left: 155px;
+  }
+
+  .text-price {
+    font-size: 20px;
+    top: 2060px;
+    left: 1600px;
+   
+  }
+}
+
+/* Свойства для всех элементов от 1440 до 2160 */
+@media screen and (min-height: 1440px) and (max-height: 2160px) {
+  .nav-item {
+    font-size: 40px;
+    padding: 16px 15px;
+    margin-right: 7px; 
+  }
+
+  .reg {
+    top: 30px;
+    right: 200px;
+  }
+
+  .m3-news { /* Фото зада */
+    position: absolute;
+    top: 212px;
+    left: 1450px;
+  }
+
+  .m3-news-2 {  /*Фото бампера*/ 
+    position: absolute;
+    top: 190px;
+    left: 575px;    
+  }
+
+  .m3-center { /* Вся машина*/
+    position: absolute;
+    top: 270px;
+    left: 800px;
+  }
+
+  .text-m3-news {  /* верхний текст */
+    top: 170px;
+    left: 835px;
+    
+  }
+
+  .text-m3-news-2 { /* Текст Competition` */
+    top: 220px;
+    left: 835px;
+   
+  }
+
+  .text-m3-news-low {  /* Нижний  текст */
+    top: 475px;
+    left: 1450px;
+  }
+
+         /* ВТОРАЯ МАШИНА*/
+         
+  .m2-coupe-face { /* перед машины m2*/
+    position: absolute;
+    top: 600px;
+    left: 535px;
+  }
+  
+  .text-m2-news { /* текст про название */
+      top: 670px;
+      left: 845px;
+      font-size: 60px;
+  }
+  
+  .text-m2-news-2 { /* текст снизу названия*/
+      top: 720px;
+      left: 845px;
+      font-size: 58px;
+    
+  }
+  
+  .text-m2-news-low { /* текст с годов выпуска*/
+      top: 940px;
+      left: 1470px;
+      font-size: 20px;
+  }
+  
+  h1 { /* Текст "Узнать больше" */
+      top: 960px;
+      left: 1455px;
+      font-size: 20px;
+  }
+  
+  h2 {  /* нижний текст под "Узнать больше" */    
+      top: 980px;
+      left: 1455px;
+      font-size: 20px;
+  }
+  .m2-news {  /* Картинкас задом bmw m2  */
+      top: 695px;
+      left: 1455px;
+  }
+  
+  .m2-center { /* Машина  m2 по центру */
+      top: 460px;
+      left: 680px; 
+  }
+
+}
+  
+
+.low-window { /* Таблица с титрами */
+  position: absolute;
+  top: 3700px;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(21, 22, 22);
+}
+  .telegram { /* ссылка на мой телеграм канал */
+    position: absolute;
+    top: 3852px;
+    left: 405px;
+  }
+  
+  .titles-1 { /* первое слово в титрах */
+    position: absolute;
+    top: 3740px;
+    left: 50px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+    transition: color 0.2s linear;
+  }
+  
+  .titles-2 { /* второе слово в титрах */
+    position: absolute;
+    top: 3780px;
+    left: 50px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+    transition: color 0.2s linear;
+  }
+  
+  .titles-1:hover { /* посдсветка 1  слова при наведении */
+  color: rgb(255, 255, 255);
+  }
+  
+  .titles-2:hover { /* посдсветка 2  слова при наведении */
+    color: rgb(255, 255, 255);
+  }
+  
+  .titles-3 { /* третье слово в титрах */
+    position: absolute;
+    top: 3855px;
+    left: 50px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+  }
+  
+  .titles-4 { /* Четвертые слово в титрах */
+    position: absolute;
+    top: 3820px;
+    left: 50px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+  }
+  
+  
+  .titles-4:hover { /* подсдсветка 4  слова при наведении */
+    color: rgb(255, 255, 255);
+  }
+  
+  .titles-5 { /* Пятые слова в титрах */
+    position: absolute;
+    top: 3950px;
+    left: 50px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+  }
+  
+  .titles-6 { /* Шестые слова в титрах */
+    position: absolute;
+    top: 3740px;
+    left: 450px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+  }
+  
+  .titles-6:hover { /* подсдсветка 4  слова при наведении */
+    color: rgb(255, 255, 255);
+  }
+  
+  .titles-7 { /* второе слово в титрах */
+    position: absolute;
+    top: 3780px;
+    left: 450px;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(216, 200, 200);
+    transition: color 0.2s linear;
+  }
+  
+  .titles-7:hover { /* посдсветка 1  слова при наведении */
+  color: rgb(255, 255, 255);
+  }

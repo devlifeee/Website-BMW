@@ -418,7 +418,7 @@ h2 {  /* нижний текст под "Узнать больше" */
   }
 
   .m5-2 img { /* Машина целиком первая */
-    left: 150px;
+    left: 155px;
     top: 1700px;
     width: 535px;
     height: 350px;
@@ -456,6 +456,75 @@ h2 {  /* нижний текст под "Узнать больше" */
     left: 1600px;
    
   }
+            /* 4 Машина */
+  .i4-1 img { /* Длинная фотка */
+    position: absolute;
+    left: 155px;
+    top: 2400px;
+    width: 1600px;
+    height: 500px;
+  }
+
+  .i4-2 img { /* Перед машины */
+    position: absolute;
+    left: 155px;
+    top: 2800px;
+    width: 535px;
+    height: 350px;
+  }
+
+  .i4-3 img { /* Фото сзади сбоку */
+    position: absolute;
+    left: 685px;
+    top: 2800px;
+    width: 535px;
+    height: 350px;
+  }
+
+  .i4-4 img { /* Салон и руль */
+    position: absolute;
+    left: 1220px;
+    top: 2800px;
+    width: 532px;
+    height: 350px;
+  }
+
+  .text-i4 {  /*  Текст " Представлена новая i4 " */
+    position: absolute;
+    font-family: monospace;
+    font-size: 50px;
+    top: 3180px;
+    left: 155px;
+    color: #ccc;
+  }
+
+  .text-i4-small { /* Нижний текст */
+    position: absolute;
+    font-family: monospace;
+    font-size: 20px;
+    top: 3260px;
+    left: 155px;
+    color: #ccc;
+  }
+
+  .text-price-i4 { /*  Текст с ценой */
+    position: absolute;
+    font-family: monospace;
+    font-size: 20px;
+    top: 3170px;
+    left: 1550px;
+    color: #ccc;
+  }
+
+  .text-last {
+    position: absolute;
+    font-family: monospace;
+    font-size: 30px;
+    top: 3550px;
+    left: 170px;
+    color: #ffffff;
+  }
+
 }
 
 /* Свойства для всех элементов от 1440 до 2160 */

@@ -3,6 +3,14 @@ body { /* убираются отступы */
   background-color: rgb(10, 10, 10);    
 }
 
+.header { /* изображение */
+  background-image: url(img/2021_bmw_m5_uk_22_1600x1200.jpg); 
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; /* Делаем .header элементом Flexbox */   
+}
+
 .header_line { /*елементы в 1 строке*/
   display: flex;
   justify-content: space-between;
@@ -103,5 +111,59 @@ body { /* убираются отступы */
 
 .main:hover .container .title,
 .main:hover .container .desc{
+    left:160%;
+}
+/* Про второго разработчика */
+
+.Seva { /* фотка со мной и тп */
+  position: absolute;
+  width: 140%;
+  border-radius: 50%;
+  top: 150px;
+  left: 50px;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+}
+
+.main-2 {  /* Создание блока с информацией */
+  box-sizing: border-box;
+  padding: 3em;
+  position: absolute;
+  top: 150px;
+  left: 800px;
+}
+
+.title-2 { /* Заголовок */
+  font-family: monospace;
+  font-size: 40px;
+  color:#ffffff;
+  margin-bottom: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  z-index: 9;
+}
+
+.title-2 > span{
+  font-size: 25px;
+  display:block;
+  color: #ffffff;
+}
+
+.desc-2 { /* Контейнер со всем текстом */
+  width: 160px;
+  font-family: monospace;
+  font-size: 15px;
+  color:#ffffff;
+  left:0;
+  bottom: 2rem;
+  line-height: 1.8;
+  position: relative;
+  transition: all 1s;
+}
+
+.main-2:hover .container-2 .title-2,
+.main-2:hover .container-2 .desc-2{
     left:160%;
 }

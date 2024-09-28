@@ -120,7 +120,7 @@ color: rgb(154, 197, 223);
 
 .wrapper input[type="password"] { 
   font-family: monospace;
-  color: #ffffff; /* Задайте желаемый цвет */
+  color: #ffffff; 
   font-family: 40px;
 }
 

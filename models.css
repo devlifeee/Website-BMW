@@ -1209,3 +1209,17 @@ color: rgb(255, 255, 255);
 .titles-7:hover { /* посдсветка 1  слова при наведении */
 color: rgb(255, 255, 255);
 }
+
+/* Свойства для всех элементов от 1080 до 1440 */
+@media screen and (min-height: 1000px) and (max-height: 1439px) {
+  .nav-item {
+    font-size: 40px;
+    padding: 20px 15px;
+    margin-right: 7px; 
+  }
+
+  .reg {
+    top: 30px;
+    right: 140px;
+   }
+}

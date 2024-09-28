@@ -16,7 +16,7 @@ body { /* убираются отступы */
 }
 
 
-body .line { /*полоска*/
+body .line { /*полоска */
     width: 90%;
     height: 2px; 
     background-color: #ccc; 

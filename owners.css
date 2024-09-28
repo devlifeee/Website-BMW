@@ -219,3 +219,111 @@ body { /* убираются отступы */
   }
   
 }
+
+.low-window { /* Таблица с титрами */
+  position: absolute;
+  top: 650px;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(21, 22, 22);
+}
+
+.telegram { /* ссылка на мой телеграм канал */
+  position: absolute;
+  top: 812px;
+  left: 405px;
+}
+
+.titles-1 { /* первое слово в титрах */
+  position: absolute;
+  top: 700px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+  transition: color 0.2s linear;
+}
+
+.titles-2 { /* второе слово в титрах */
+  position: absolute;
+  top: 740px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+  transition: color 0.2s linear;
+}
+
+.titles-1:hover { /* посдсветка 1  слова при наведении */
+color: rgb(255, 255, 255);
+}
+
+.titles-2:hover { /* посдсветка 2  слова при наведении */
+  color: rgb(255, 255, 255);
+}
+
+.titles-3 { /* третье слово в титрах */
+  position: absolute;
+  top: 815px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+.titles-4 { /* Четвертые слово в титрах */
+  position: absolute;
+  top: 780px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+
+.titles-4:hover { /* подсдсветка 4  слова при наведении */
+  color: rgb(255, 255, 255);
+}
+
+.titles-5 { /* Пятые слова в титрах */
+  position: absolute;
+  top: 900px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+.titles-6 { /* Шестые слова в титрах */
+  position: absolute;
+  top: 700px;
+  left: 450px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+.titles-6:hover { /* подсдсветка 4  слова при наведении */
+  color: rgb(255, 255, 255);
+}
+
+.titles-7 { /* второе слово в титрах */
+  position: absolute;
+  top: 740px;
+  left: 450px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+  transition: color 0.2s linear;
+}
+
+.titles-7:hover { /* посдсветка 1  слова при наведении */
+color: rgb(255, 255, 255);
+}

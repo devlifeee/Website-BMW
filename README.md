@@ -11,5 +11,9 @@
 
 <h3>En</h3>
 <h4>
- When creating a site for BMW fans, I tried to make it as convenient as possible for viewing on monitors with a resolution of 1366 by 768. The site features more than 30 BMW models, including M3, M4, M5, M2, X7 and many others. At the moment, the site provides basic functionality that allows you to get acquainted with information about the BMW M2. On the "Home", "News" and "Owners" pages, images will be adjusted to fit 1920 x 1080 screens.</h4>
+ When creating a site for BMW fans, I tried to make it as convenient as possible for viewing on 
+monitors with a resolution of 1366 by 768. The site features more than 30 BMW models, including 
+M3, M4, M5, M2, X7 and many others. At the moment, the site provides basic functionality that allows you 
+to get acquainted with information about the BMW M2. On the "Home", "News" and "Owners" pages, images will 
+be adjusted to fit 1920 x 1080 screens.</h4>
 <img src="img/github.PNG" alt="фото проекта"/>

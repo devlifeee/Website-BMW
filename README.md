@@ -18,7 +18,10 @@ Imagine this: an elegant website dedicated to the legendary BMW brand, designed 
 
 More than 30 BMW models, from the iconic Troika to the powerful X7 and exclusive M-series cars, are presented in a carefully compiled catalog. Each model is a different story, revealed through high–quality images, detailed technical specifications, and fascinating descriptions.
 
-Special attention is paid to the BMW M2 Coupe, the true embodiment of BMW's sporting spirit. His page is not just a technical description, but an anthem to dynamics and power. Here are breathtaking photos showing the sophistication of the design and the aggressive aesthetics of the car..</h4>
+Special attention is paid to the BMW M2 Coupe, the true embodiment of BMW's sporting spirit. His page is not just a technical description, but an anthem to dynamics and power. Here are breathtaking photos showing the sophistication of the design and the aggressive aesthetics of the car. The detailed technical specifications, including data on the engine, transmission and chassis, will allow you to evaluate the full power and handling of this sports coupe.
+
+The site is currently under active development. So far, the focus is on providing the most complete information about the BMW M2 Coupe. However, it is planned to expand the functionality in the future by adding more detailed descriptions for all models. The "Home", "News" and "For Owners" sections will be adapted for high-resolution (1920x1080) screens, providing the most comfortable viewing experience for users with various types of devices. This creates not just a static resource, but an ever-evolving and improving online portal dedicated to the BMW world.
+</h4>
 
 
 

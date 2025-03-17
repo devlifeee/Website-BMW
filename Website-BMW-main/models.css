@@ -1,0 +1,1225 @@
+body { /* убираются отступы */
+  margin: 0;
+  background-color: rgb(10, 10, 10);    
+}
+
+/*.header { /* изображение *//*
+  background-image: url(img-models/IMG_4746.PNG); 
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; /* Делаем .header элементом Flexbox */ /*  
+}*/
+
+.header_line { /*елементы в 1 строке*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.line { /*полоска*/
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 85px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+.nav {
+  position: absolute;
+  left: 129px;
+  top: 0px;
+  padding: 0px 15px
+}
+
+.nav-item {   /* шрифт */
+  font-family: monospace;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 30px 15px;
+  margin-right: 7px;
+  display: inline-block;
+  transition: color 0.6s linear;
+}
+
+.nav-item:hover {
+color: rgb(154, 197, 223);
+/*color:rgb(175, 221, 240)*/
+}
+
+.header-logo {
+  padding: 12px; /*  отступ от верхнего края*/
+  margin-left: 60px; /* отступ с левого края */
+}
+
+.reg { /*  значок регистрации*/
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  color: #ffffff;
+}
+
+h1 { /* надпись M */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 100px;
+  color: white;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.wrapper img {
+  transition: scale 400ms;
+}
+
+.wrapper:hover img {
+  scale: 107%;
+}
+
+.img-1 { /* первое изображение */
+  position: absolute;
+  top: 220px;
+  left: 80px;
+}
+
+.text-1 { /* Большой текст */
+  position: absolute;
+  top: 160px;
+  left: -15px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-1 { /* лого над текстом  */
+  position: absolute;
+  left: -15px;
+  top: 130px;
+}
+
+.text-low-1 { /* Маленький текст с наименованием топлива */
+  position: absolute;
+  top: 185px;
+  left: -15px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+/* дальше по той же схеме все осталбные фотографии */
+.img-2 { /* BMW X7 M60i xDrive */
+  position: absolute;
+  top: 215px;
+  left: 360px;
+}
+
+.text-2 {
+  position: absolute;
+  top: 167px;
+  left: -6px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-2 {
+  position: absolute;
+  left: -6px;
+  top: 135px;
+}
+
+.text-low-2 {
+  position: absolute;
+  top: 190px;
+  left: -6px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+
+.img-3 { /* BMW X7 M50d */
+  position: absolute;
+  top: 208px;
+  left: 690px;
+}
+
+.text-3 {
+  position: absolute;
+  top: 175px;
+  left: -25px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-3 {
+  position: absolute;
+  left: -25px;
+  top: 143px;
+}
+
+.text-low-3 {
+  position: absolute;
+  top: 197px;
+  left: -25px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+
+.img-4 { /* BMW X6 M */
+  position: absolute;
+  top: 220px;
+  left: 1010px;
+}
+
+.text-4 {
+  position: absolute;
+  top: 164px;
+  left: -15px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-4 {
+  position: absolute;
+  left: -15px;
+  top: 131px;
+}
+
+.text-low-4 {
+  position: absolute;
+  top: 186px;
+  left: -15px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-5 {
+  position: absolute;
+  top: 440px;
+  left: 95px;
+}
+
+.text-5 { /* BMW X6 M Competition */
+  position: absolute;
+  top: 210px;
+  left: -30px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-5 {
+  position: absolute;
+  left: -30px;
+  top: 180px;
+}
+
+.text-low-5 {
+  position: absolute;
+  top: 235px;
+  left: -30px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}  
+
+.img-6 { /* BMW X5 M */
+  position: absolute;
+  top: 470px;
+  left: 348px;
+}
+
+.text-6 {
+  position: absolute;
+  top: 182px;
+  left: 4px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-6 {
+  position: absolute;
+  left: 4px;
+  top: 152px;
+}
+
+.text-low-6 {
+  position: absolute;
+  top: 206px;
+  left: 4px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-7 { /* BMW X5 M Competition */
+  position: absolute;
+  top: 500px;
+  left: 700px;
+}
+
+.text-7 {
+  position: absolute;
+  top: 150px;
+  left: -35px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-7 {
+  position: absolute;
+  left: -35px;
+  top: 121px;
+}
+
+.text-low-7 {
+  position: absolute;
+  top: 175px;
+  left: -35px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-8 { /* BMW M8 Gran Coupe */
+  position: absolute;
+  top: 487px;
+  left: 990px;
+}
+
+.text-8 {
+  position: absolute;
+  top: 162px;
+  left: 7px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-8 {
+  position: absolute;
+  left: 7px;
+  top: 132px;
+}
+
+.text-low-8 {
+  position: absolute;
+  top: 190px;
+  left: 7px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-9 { /* BMW M8 Cabrio */
+  position: absolute;
+  top: 790px;
+  left: 75px;
+}
+
+.text-9 {
+  position: absolute;
+  top: 162px;
+  left: -12px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-9 {
+  position: absolute;
+  left: -12px;
+  top: 130px;
+}
+
+.text-low-9 {
+  position: absolute;
+  top: 188px;
+  left: -12px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-10 { /* BMW M8 Coupe */
+  position: absolute;
+  top: 760px;
+  left: 340px;
+}
+
+.text-10 {
+  position: absolute;
+  top: 193px;
+  left: 10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-10 {
+  position: absolute;
+  left: 10px;
+  top: 160px;
+}
+
+.text-low-10 {
+  position: absolute;
+  top: 215px;
+  left: 10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-11 { /* BMW M760Li xDrive */
+  position: absolute;
+  top: 730px;
+  left: 690px;
+}
+
+.text-11 {
+  position: absolute;
+  top: 225px;
+  left: -26px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-11 {
+  position: absolute;
+  left: -26px;
+  top: 190px;
+}
+
+.text-low-11 {
+  position: absolute;
+  top: 245px;
+  left: -26px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-12 { /* BMW M4 Coupe */
+  position: absolute;
+  top: 750px;
+  left: 1005px;
+}
+
+.text-12 {
+  position: absolute;
+  top: 205px;
+  left: -7px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-12 {
+  position: absolute;
+  left: -7px;
+  top: 170px;
+}
+
+.text-low-12 {
+  position: absolute;
+  top: 227px;
+  left: -7px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-13 { /* BMW M440i Drive Cabri */
+  position: absolute;
+  top: 1050px;
+  left: 50px;
+}
+
+.text-13 {
+  position: absolute;
+  top: 192px;
+  left: 12px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-13 {
+  position: absolute;
+  left: 12px;
+  top: 160px;
+}
+
+.text-low-13 {
+  position: absolute;
+  top: 214px;
+  left: 12px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-14 { /* BMW M5 Competition */
+  position: absolute;
+  top: 1052px;
+  left: 330px;
+}
+
+.text-14 {
+  position: absolute;
+  top: 192px;
+  left: 20px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-14 {
+  position: absolute;
+  left: 20px;
+  top: 160px;
+}
+
+.text-low-14 {
+  position: absolute;
+  top: 214px;
+  left: 20px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-15 { /* BMW M3 Competition */
+  position: absolute;
+  top: 1090px;
+  left: 690px;
+}
+
+.text-15 {
+  position: absolute;
+  top: 156px;
+  left: -30px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-15 {
+  position: absolute;
+  left:-30px;
+  top: 124px;
+}
+
+.text-low-15 {
+  position: absolute;
+  top: 175px;
+  left: -30px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-16 { /* BMW M2 Coupe */
+  position: absolute;
+  top: 1055px;
+  left: 995px;
+}
+
+.text-16 {
+  position: absolute;
+  top: 192px;
+  left: 5px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-16 {
+  position: absolute;
+  left: 5px;
+  top: 160px;
+}
+
+.text-low-16 {
+  position: absolute;
+  top: 210px;
+  left: 5px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-17 { /* BMW Z4 Roadster */
+  position: absolute;
+  top: 1380px;
+  left: 0px;
+}
+
+.text-17 {
+  position: absolute;
+  top: 165px;
+  left: 59px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-17 {
+  position: absolute;
+  top: 185px;
+  left: 59px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line { /*полоска*/
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 85px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+.line-2 { /* 2 полоска после М */
+    position: absolute;
+    width: 90%;
+    height: 2px;  
+    background-color: #ccc; 
+    top: 1740px; /* Положение сверху */
+    margin-left: 65px;
+}
+
+h2 { /* надпись M */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 1760px;
+  color: white;
+}
+
+.img-18 {
+  position: absolute;
+  top: 1850px;
+  left: 50px;
+}
+
+.text-18 { /* BMW 8  Coupe */
+  position: absolute;
+  top: 205px;
+  left: 10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-18 {
+  position: absolute;
+  left: 10px;
+  top: 174px;
+}
+
+.text-low-18 {
+  position: absolute;
+  top: 223px;
+  left: 10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-19 { /* BMW 8  Cabrio */
+  position: absolute;
+  top: 1880px;
+  left: 370px;
+}
+
+.text-19 {
+  position: absolute;
+  top: 175px;
+  left: -15px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-19 {
+  position: absolute;
+  top: 195px;
+  left: -15px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-20 {
+  position: absolute;
+  top: 1850px;
+  left: 650px;
+}
+
+.text-20 {
+  position: absolute;
+  top: 205px;
+  left: 10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-20 {
+  position: absolute;
+  top: 223px;
+  left: 10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-3 { /* 3 полоска после 8 */
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 2200px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+h3 { /* надпись 7 */
+position: absolute;
+font-size: 30px;
+font-family: system-ui;
+left: 65px;
+top: 2230px;
+color: white;
+}
+
+
+.img-21 { /* bmw 760 */
+  position: absolute;
+  top: 2320px;
+  left: 70px;
+}
+
+.text-21 {
+  position: absolute;
+  top: 205px;
+  left: -10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-21 {
+  position: absolute;
+  top: 223px;
+  left: -10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-22 { /* bmw 7 LONG */
+  position: absolute;
+  top: 2350px;
+  left: 360px;
+}
+
+.text-22 {
+  position: absolute;
+  top: 175px;
+  left: -6px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-22 {
+  position: absolute;
+  top: 192px;
+  left: -6px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-4 { 
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 2670px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+h4 { /* надпись 6 */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 2690px;
+  color: white;
+}
+
+.img-23 { /* bmw 6 GT  */
+  position: absolute;
+  top: 2800px;
+  left: 70px;
+}
+
+.text-23 {
+  position: absolute;
+  top: 205px;
+  left: -10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-23 {
+  position: absolute;
+  top: 223px;
+  left: -10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-5 { /* полоска перед 5 */
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 3090px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+h5 { /* надпись 5 */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 3140px;
+  color: white;
+}
+
+.img-24 { /* bmw 5  */
+  position: absolute;
+  top: 3300px;
+  left: 70px;
+}
+
+.text-24 {
+  position: absolute;
+  top: 160px;
+  left: -10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-24 {
+  position: absolute;
+  left: -10px;
+  top: 130px;
+}
+
+.text-low-24 {
+  position: absolute;
+  top: 180px;
+  left: -10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-6 { /* полоска перед 4 */
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 3650px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+h6 { /* надпись 4 */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 3640px;
+  color: white;
+}
+
+.img-25 { /* bmw  coupe */
+  position: absolute;
+  top: 3780px;
+  left: 70px;
+}
+
+.text-25 {
+  position: absolute;
+  top: 165px;
+  left: -10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-25 {
+  position: absolute;
+  left: -10px;
+  top: 135px;
+}
+
+.text-low-25 {
+  position: absolute;
+  top: 185px;
+  left: -10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-26 { /* bmw cabrio */
+  position: absolute;
+  top: 3780px;
+  left: 370px;
+}
+
+.text-26 {
+  position: absolute;
+  top: 168px;
+  left: -10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-26 {
+  position: absolute;
+  top: 186px;
+  left: -10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-27 { /* bmw gran coupe */
+  position: absolute;
+  top: 3780px;
+  left: 670px;
+}
+
+.text-27{
+  position: absolute;
+  top: 168px;
+  left: -10px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-27 {
+  position: absolute;
+  top: 186px;
+  left: -10px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-7 { /* полоска перед 3 */
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 4100px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+p { /* надпись 3 */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 4120px;
+  color: white;
+}
+
+.img-28 { /* bmw 3 */
+  position: absolute;
+  top: 4250px;
+  left: 55px;
+}
+
+.text-28 {
+  position: absolute;
+  top: 190px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-28 {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-8 { /* полоска перед 3 */
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 4610px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+.line-text-2 { /* надпись 2 */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 4660px;
+  color: white;
+}
+
+.img-29 { /* BMW 2  Coupe  */
+  position: absolute;
+  top: 4700px;
+  left: 55px;
+}
+
+.text-29 {
+  position: absolute;
+  top: 190px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.m-logo-29 {
+  position: absolute;
+  left: 0px;
+  top: 158px;
+}
+
+.text-low-29   {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.img-30 { /* BMW 2 Gran Coupe */
+  position: absolute;
+  top: 4715px;
+  left: 355px;
+}
+
+.text-30 {
+  position: absolute;
+  top: 175px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+
+.text-low-30  {
+  position: absolute;
+  top: 194px;
+  left: 0px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.line-9 { /* полоска перед 3 */
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 5050px; /* Положение сверху */
+  margin-left: 65px;
+}
+
+.line-text-Z { /* надпись z */
+  position: absolute;
+  font-size: 30px;
+  font-family: system-ui;
+  left: 65px;
+  top: 5110px;
+  color: white;
+}
+
+.img-31{ /* BMW Z4 Roadster */
+  position: absolute;
+  top: 5150px;
+  left: 55px;
+}
+
+.text-31 {
+  position: absolute;
+  top: 175px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  color:honeydew;
+}
+
+.text-low-31 {
+  position: absolute;
+  top: 194px;
+  left: 0px;
+  font-size: 12px;
+  font-family:  monospace;
+  color: rgb(117, 116, 116);
+}
+
+.low-window { /* Таблица с титрами */
+  position: absolute;
+  top: 5500px;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(21, 22, 22);
+}
+
+.telegram { /* ссылка на мой телеграм канал */
+  position: absolute;
+  top: 5652px;
+  left: 405px;
+}
+
+.titles-1 { /* первое слово в титрах */
+  position: absolute;
+  top: 5540px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+  transition: color 0.2s linear;
+}
+
+.titles-2 { /* второе слово в титрах */
+  position: absolute;
+  top: 5580px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+  transition: color 0.2s linear;
+}
+
+.titles-1:hover { /* посдсветка 1  слова при наведении */
+color: rgb(255, 255, 255);
+}
+
+.titles-2:hover { /* посдсветка 2  слова при наведении */
+  color: rgb(255, 255, 255);
+}
+
+.titles-3 { /* третье слово в титрах */
+  position: absolute;
+  top: 5655px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+.titles-4 { /* Четвертые слово в титрах */
+  position: absolute;
+  top: 5620px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+
+.titles-4:hover { /* подсдсветка 4  слова при наведении */
+  color: rgb(255, 255, 255);
+}
+
+.titles-5 { /* Пятые слова в титрах */
+  position: absolute;
+  top: 5750px;
+  left: 50px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+.titles-6 { /* Шестые слова в титрах */
+  position: absolute;
+  top: 5540px;
+  left: 450px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+}
+
+.titles-6:hover { /* подсдсветка 4  слова при наведении */
+  color: rgb(255, 255, 255);
+}
+
+.titles-7 { /* второе слово в титрах */
+  position: absolute;
+  top: 5580px;
+  left: 450px;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  color: rgb(216, 200, 200);
+  transition: color 0.2s linear;
+}
+
+.titles-7:hover { /* посдсветка 1  слова при наведении */
+color: rgb(255, 255, 255);
+}
+
+/* Свойства для всех элементов от 1080 до 1440 */
+@media screen and (min-height: 1000px) and (max-height: 1439px) {
+  .nav-item {
+    font-size: 40px;
+    padding: 20px 15px;
+    margin-right: 7px; 
+  }
+
+  .reg {
+    top: 30px;
+    right: 140px;
+   }
+}

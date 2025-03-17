@@ -1,0 +1,115 @@
+body { /* убираются отступы */
+    margin: 0;
+}
+
+.header { /* изображение */
+    background-image: url(img/2025-BMW-M2-001-1080.jpg); 
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Делаем .header элементом Flexbox */   
+}
+
+.header_line { /*елементы в 1 строке*/
+    display: flex;
+    justify-content: space-between;
+}
+
+
+body .line { /*полоска */
+    width: 90%;
+    height: 2px; 
+    background-color: #ccc; 
+    margin-top: 85px;
+    position: fixed; /* Фиксированное положение */
+    top: 0; /* Положение сверху */
+    margin-left: 65px;
+ }
+ 
+.nav-item {   /* шрифт */
+    font-family: DejaVu Sans Mono, monospace;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    margin-right: 7px;
+    display: inline-block;
+    transition: color 0.6s linear;
+}
+  
+.nav-item:hover {
+    color: rgb(154, 197, 223);
+    /*color:rgb(175, 221, 240)*/
+}
+
+.header-logo {
+    padding: 12px; /*  отступ от верхнего края*/
+    margin-left: 60px; /* отступ с левого края */
+}
+
+.text {  /* надпись M2 */
+    color: #ffffff; 
+    position: absolute; 
+    text-decoration: none;
+    top: 240px; 
+    left: 70px;
+    font-size: 80px;
+    font-family:  monospace;
+    opacity: 0.9;
+    transition: color 0.6s linear;
+    
+}
+
+
+.text_1 {  /*надпись coupe*/
+    color: #ffffff; 
+    position: absolute; 
+    top: 240px; 
+    left: 70px;
+    font-size: 40px;
+    font-family:  monospace;
+    opacity: 0.9;
+}
+text:hover { /* подсветка при наведении */
+    color: rgb(154, 197, 223);
+   
+}
+
+
+p {       /* надпись THE */
+    position: absolute;
+    text-decoration: none;
+    font-family: DejaVu Sans Mono, monospace;
+    color: #ffffff;
+    font-size: 20px;
+    top: 105px;
+    left: 0px;
+    font-family: monospace;
+    opacity: 0.9; /* прозрачность */
+}
+
+a { /* весь текст */
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.reg {
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+
+/* Свойства для всех элементов от 1080 до 1440 */
+@media screen and (min-height: 1000px) and (max-height: 1439px) {
+    .nav-item {
+      font-size: 40px;
+      padding: 20px 15px;
+      margin-right: 7px; 
+    }
+  
+    .reg {
+      top: 30px;
+      right: 140px;
+     }
+  }

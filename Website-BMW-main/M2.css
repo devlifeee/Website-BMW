@@ -1,0 +1,327 @@
+body { /* убираются отступы */
+    margin: 0;
+    background-color: #7a757c;
+}
+
+.header { /* изображение */
+    position: absolute;
+    background-image: url(img/2025-BMW-M2-004-1080.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Делаем .header элементом Flexbox */
+    
+}
+
+.header_line { /*елементы в 1 строке*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    position: absolute;
+    top: 0px;
+    left: 144px;
+
+}
+
+.line { /*полоска*/
+    position: absolute;
+    width: 90%;
+    height: 2px;  
+    background-color: #ccc; 
+    margin-top: 85px;
+    top: 110; /* Положение сверху */
+    margin-left: 65px;
+ }
+ 
+.nav-item {   /* шрифт */
+    font-family: DejaVu Sans Mono, monospace;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    margin-right: 7px;
+    display: inline-block;
+    transition: color 0.6s linear;
+}
+  
+.wrapper {
+    overflow: hidden;
+}
+  
+.wrapper img {
+    transition: scale 400ms;
+}
+  
+.wrapper:hover img {
+    scale: 95%;
+}
+
+.nav-item:hover {
+color: rgb(154, 197, 223);
+/*color:rgb(175, 221, 240)*/
+}
+
+.header-logo { /* логотип бмв */
+    padding: 12px; /*  отступ от верхнего края*/
+    margin-left: 60px; /* отступ с левого края */
+}
+
+.reg { /*  значок регистрации*/
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+
+.m-logo {  /* логотим серии м */
+    position: absolute;
+    top: 101px;
+    left: 65px;
+}
+
+.name-title { /* текст bmw m2 coupe */
+    position: absolute;
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 60px;
+    /*color: rgb(255, 255, 255);*/
+}
+
+.name_1 { /* 1 слово*/
+    position: absolute;
+    top: 112px;
+    left: 165px;
+    color: #ffffff;
+    /*color:#ffffff*/
+}
+
+.name_2 { /* 2 слово */
+    position: absolute;
+    left: 120px;
+    top: 0px;
+    color: #ffffff;
+    /*color:#ffffff*/
+}
+
+.name_3 { /* 3 слово */
+    position: absolute;
+    top: 0px;
+    left: 85px;
+    color:  #ffffff
+    /*color:#ffffff*/
+}
+
+.center_place { /* серая таблица */
+    position: absolute;
+    top: 800px;
+    left: 249px;
+    width: 800px;
+    height: 500px;
+    background-color: #363442;
+}
+
+.text-spisok {  /* весь список */
+    position: absolute;
+    font-size: 20px;
+    margin-top: 100px;
+    color: #c4bebe;
+    font-family: monospace
+}
+
+.big-text { /*верхний текст*/
+    position: absolute;
+    left: 20px;
+}
+
+.img-grey { /* машина */
+    position: absolute;
+    top: 1000px;
+    left: 400px;
+}
+
+.spisok-m { /*второй лого*/
+    position: absolute;
+    top: 800px;
+    left: 260px;
+}
+
+.speed { /* полоска со лошадиными силами */
+    position: absolute;
+    top: 600px;
+    left: 249px;
+    width: 800px;
+    height: 100px;
+    background-color: #363442;
+}
+
+.text-low { /*нижний текст на полоске */
+    position: absolute;
+    top: 670px;
+    left: 400px;
+    font-size: 20px;
+    font-family: monospace;
+    color: #c4bebe;
+
+}
+
+
+.text-power { /* текст с лошадиными силами*/
+    position: absolute;
+    font-size: 25px;
+    font-family: monospace;
+    top: 635px;
+    left: 260px;
+    color: #c4bebe;
+}
+
+.number { /*текст с количеством сил*/
+    position: absolute;
+    font-size: 22px;
+    font-family: monospace;
+    top: 665px;
+    left: 269px;
+    color: #c4bebe;
+}
+
+.engine { /*текст с мотором*/
+    position: absolute;
+    font-size: 25px;
+    font-family: monospace;
+    top: 635px;
+    left: 913px;
+    color: #c4bebe;
+}
+
+.type { /*текст с типом мотора*/
+    position: absolute;
+    font-size: 22px;
+    font-family: monospace;
+    top: 665px;
+    left: 935px;
+    color: #c4bebe;
+}
+
+
+
+.text-motor-main { /*текст про сам мотор верхний*/
+    position: absolute;
+    top: 1680px;
+    left: 210px;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: monospace;
+}
+
+.text-motor-small { /* нижний текст про мотор */
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+.place-3 { /* серая таблица */
+    position: absolute;
+    top: 1410px;
+    left: 199px;
+    width: 900px;
+    height: 570px;
+    background-color: #363442;
+}
+
+.img-1picture { /* 1 фото про мотор*/
+    position: absolute;
+    top: 1480px;
+    left: 205px
+}
+
+.color-around { /* серый цвет вокруг изображений */
+    position: absolute;
+    top: 1472px;
+    left: 199px;
+    height: 195px;
+    width: 900px;
+    background-color: #5c5858;
+}
+
+.img-2picture { /* картинка с машиной  */
+    position: absolute;
+    top: 1480px;
+    left: 505px
+    
+}
+
+.box-main {  /* верхний текст про коробку передач*/
+    position: absolute;
+    top: 1680px;
+    left: 510px;
+    font-size: 22px;
+    font-family: monospace;
+    color: #ffffff;
+}
+
+.box-low { /* нижний текст про коробку передач*/
+    position: absolute;
+    top: 87px;
+    left: 0px;
+    font-size: 14px;
+    font-family: monospace;
+    color: #ffffff;
+}
+
+.img-3picture { /* картинка с рулем */
+    position: absolute;
+    top: 1479px;
+    left: 805px
+}
+
+.rule-main { /*верхний текст про подвеску*/
+    position: absolute;
+    top: 1680px;
+    left: 805px;
+    font-size: 22px;
+    font-family: monospace;
+    color: #ffffff;
+}
+
+.rule-low { /* нижний текст про подсвеску */
+    position: absolute;
+    top: 1750px;
+    left: 805px;
+    font-size: 14px;
+    font-family: monospace;
+    color: #ffffff;
+}
+
+.nav-1 {
+    position: absolute;
+    top: 1400px;
+    left: 200px;
+
+}
+ 
+.nav-2{   /* шрифт */
+    font-family: DejaVu Sans Mono, monospace;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    margin-right: 7px;
+    display: inline-block;
+    transition: color 0.6s linear;
+}
+  
+.nav-2:hover {
+color: rgb(154, 197, 223);
+/*color:rgb(175, 221, 240)*/
+}
+
+.place-4 {
+    position: absolute;
+    top: 100px;
+    left: 5px;
+    width: 1000px;
+    height: 100px;
+    color: #ffffff;
+}

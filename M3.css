@@ -1,0 +1,114 @@
+body { /* убираются отступы */
+    margin: 0;
+    background-color: #7a757c;
+}
+
+.header { /* изображение */
+    position: absolute;
+    background-image: url(img/BMW-M4.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Делаем .header элементом Flexbox */
+    
+}
+
+.header_line { /*елементы в 1 строке*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    position: absolute;
+    top: 0px;
+    left: 144px;
+
+}
+
+.line { /*полоска*/
+    position: absolute;
+    width: 90%;
+    height: 2px;  
+    background-color: #ccc; 
+    margin-top: 85px;
+    top: 110; /* Положение сверху */
+    margin-left: 65px;
+ }
+ 
+.nav-item {   /* шрифт */
+    font-family: DejaVu Sans Mono, monospace;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    margin-right: 7px;
+    display: inline-block;
+    transition: color 0.6s linear;
+}
+  
+.wrapper {
+    overflow: hidden;
+}
+  
+.wrapper img {
+    transition: scale 400ms;
+}
+  
+.wrapper:hover img {
+    scale: 95%;
+}
+
+.nav-item:hover {
+color: rgb(154, 197, 223);
+/*color:rgb(175, 221, 240)*/
+}
+
+.header-logo { /* логотип бмв */
+    padding: 12px; /*  отступ от верхнего края*/
+    margin-left: 60px; /* отступ с левого края */
+}
+
+.reg { /*  значок регистрации*/
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+
+.m-logo {  /* логотим серии м */
+    position: absolute;
+    top: 101px;
+    left: 65px;
+}
+
+.name-title { /* текст bmw m2 coupe */
+    position: absolute;
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 60px;
+    /*color: rgb(255, 255, 255);*/
+}
+
+.name_1 { /* 1 слово*/
+    position: absolute;
+    top: 112px;
+    left: 165px;
+    color: #ffffff;
+    /*color:#ffffff*/
+}
+
+
+.name_2 { /* 2 слово */
+    position: absolute;
+    left: 120px;
+    top: 0px;
+    color: #ffffff;
+    /*color:#ffffff*/
+}
+
+.name_3 { /* 3 слово */
+    position: absolute;
+    top: 0px;
+    left: 85px;
+    color:  #ffffff
+    /*color:#ffffff*/
+}

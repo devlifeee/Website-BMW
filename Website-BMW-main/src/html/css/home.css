@@ -3,7 +3,7 @@ body { /* убираются отступы */
 }
 
 .header { /* изображение */
-    background-image: url(img/2025-BMW-M2-001-1080.jpg); 
+    background-image: url(Website-BMW-main/src/html/img/сar.jpg); 
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;

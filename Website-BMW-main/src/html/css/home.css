@@ -3,7 +3,7 @@ body { /* убираются отступы */
 }
 
 .header { /* изображение */
-    background-image: url(Website-BMW-main/src/html/img/сar.jpg); 
+    background-image: url("img/bmw-logo-14.png"); 
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +35,7 @@ body .line { /*полоска */
     margin-right: 7px;
     display: inline-block;
     transition: color 0.6s linear;
+    
 }
   
 .nav-item:hover {

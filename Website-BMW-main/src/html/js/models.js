@@ -23,14 +23,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
-const container_4 = document.querySelector('.container_4');
+const container_3 = document.querySelector('.container_3');
 
 window.addEventListener('scroll', () => {
     const windowHeight = window.innerHeight;
-    const container_4Top = container_4.getBoundingClientRect().top;
-    const container_4Visible = container_4Top < windowHeigh;
+    const container_3Top = container_3.getBoundingClientRect().top;
+    const container_3Visible = container_3Top < windowHeight;
 
-    if (container_4Visible) {
-        container_4.classList.add('show');
+    if (container_3Visible) {
+        container_3.classList.add('show');
     }
 });

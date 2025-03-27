@@ -1,16 +1,7 @@
 body { /* убираются отступы */
   margin: 0;
   background-color: rgb(10, 10, 10);    
-  
 }
-
-/*.header { /* изображение *//*
-  background-image: url(img-models/IMG_4746.PNG); 
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex; /* Делаем .header элементом Flexbox */ /*  
-}*/
 
 .header_line { /*елементы в 1 строке*/
   display: flex;
@@ -22,7 +13,7 @@ body { /* убираются отступы */
   width: 90%;
   height: 2px;  
   background-color: #ccc; 
-  top: 85px; /* Положение сверху */
+  top: 85px; 
   margin-left: 65px;
 }
 
@@ -1231,33 +1222,15 @@ color: rgb(255, 255, 255);
 }
 
 
-.container {
-  opacity: 0; 
-  transition: opacity 1s ease-in-out; 
-  text-align: center;
-  margin-top: 0px; 
+/* ... ваш существующий CSS ... */
+
+.img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.container.show {
-  opacity: 1; /* Текст становится видимым */
-}
-
-.container_2 {
-  opacity: 0; 
-  transition: opacity 1.5s ease-in-out; 
-  
-}
-
-.container_2.show {
-  opacity: 1; /* Текст становится видимым */
-}
-
-.container_3 {
-  opacity: 0; 
-  transition: opacity 1.5s ease-in-out; 
-  
-}
-
-.container_3.show {
-  opacity: 1; /* Текст становится видимым */
+.img.show {
+  opacity: 1;
+  transform: translateY(0);
 }

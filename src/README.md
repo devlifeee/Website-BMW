@@ -10,7 +10,7 @@
 В настоящее время сайт находится на стадии активного развития. Пока что основное внимание уделено предоставлению максимально полной информации о BMW M2 Купе. Однако, в будущем планируется расширить функционал, добавив более подробные описания для всех моделей. Разделы "Главная", "Новости" и "Для владельцев" будут адаптированы для экранов с высоким разрешением (1920x1080), обеспечивая максимально комфортный просмотр для пользователей с различными типами устройств. Таким образом, создается не просто статичный ресурс, а постоянно развивающийся и совершенствующийся онлайн-портал, посвященный миру BMW.
 </h4>
 <p align="center">
-   <img src="img/github.PNG" alt="фото проекта" />
+   <img src="img\photo_2025-04-02_20-42-58.jpg" alt="фото проекта" />
 </p>
 <h3>En</h3>
 <h4>
@@ -22,9 +22,5 @@ Special attention is paid to the BMW M2 Coupe, the true embodiment of BMW's spor
 
 The site is currently under active development. So far, the focus is on providing the most complete information about the BMW M2 Coupe. However, it is planned to expand the functionality in the future by adding more detailed descriptions for all models. The "Home", "News" and "For Owners" sections will be adapted for high-resolution (1920x1080) screens, providing the most comfortable viewing experience for users with various types of devices. This creates not just a static resource, but an ever-evolving and improving online portal dedicated to the BMW world.
 </h4>
-
-
-
-
 
 

@@ -1,20 +1,12 @@
-body { /* убираются отступы */
+    body { /* убираются отступы */
     margin: 0;
-}
-
-.header { /* изображение */
-    background-image: url("img/bmw-logo-14.png"); 
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex; /* Делаем .header элементом Flexbox */   
+    background-color: rgb(0, 0, 0);
 }
 
 .header_line { /*елементы в 1 строке*/
     display: flex;
     justify-content: space-between;
 }
-
 
 body .line { /*полоска */
     width: 90%;

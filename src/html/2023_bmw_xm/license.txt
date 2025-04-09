@@ -1,0 +1,11 @@
+Model Information:
+* title:	2023 BMW XM
+* source:	https://sketchfab.com/3d-models/2023-bmw-xm-32c73ea915734654abae29120ab6077d
+* author:	Eton (https://sketchfab.com/Carlove267272222)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2023 BMW XM" (https://sketchfab.com/3d-models/2023-bmw-xm-32c73ea915734654abae29120ab6077d) by Eton (https://sketchfab.com/Carlove267272222) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

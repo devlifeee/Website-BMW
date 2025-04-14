@@ -8,15 +8,14 @@
     justify-content: space-between;
 }
 
-body .line { /*полоска */
-    width: 90%;
-    height: 2px; 
-    background-color: #ccc; 
-    margin-top: 85px;
-    position: fixed; /* Фиксированное положение */
-    top: 0; /* Положение сверху */
-    margin-left: 65px;
- }
+.line { /*полоска*/
+  position: absolute;
+  width: 90%;
+  height: 2px;  
+  background-color: #ccc; 
+  top: 85px; 
+  margin-left: 65px;
+}
  
 .nav-item {   /* шрифт */
     font-family: DejaVu Sans Mono, monospace;

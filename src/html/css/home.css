@@ -58,38 +58,28 @@ body { /* убираются отступы */
     
 }
 
-
-.text_1 {  /*надпись coupe*/
-    color: #ffffff; 
-    position: absolute; 
-    top: 240px; 
-    left: 70px;
-    font-size: 40px;
-    font-family:  monospace;
-    opacity: 0.9;
-}
 text:hover { /* подсветка при наведении */
     color: rgb(154, 197, 223);
    
 }
 
+h1 {
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: 400;
+  margin-top: -90px;
+}
 
-p {       /* надпись THE */
+p {
     position: absolute;
     text-decoration: none;
     font-family: DejaVu Sans Mono, monospace;
     color: #ffffff;
-    font-size: 20px;
-    top: 105px;
+    font-size: 30px;
+    margin-top: -120px;
     left: 0px;
     font-family: monospace;
     opacity: 0.9; /* прозрачность */
-}
-
-a { /* весь текст */
-    text-decoration: none;
-    color: #ffffff;
-    opacity: 0.9;
 }
 
 .reg {

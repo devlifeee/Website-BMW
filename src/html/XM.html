@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Плавное появление текста</title>
 </head>
 <body>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <model-viewer src="img\scene.gltf" alt="Описание модели" auto-rotate camera-controls></model-viewer>  
+    <div class="container">
+        <div class="text" id="text">Ваш текст здесь</div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    overflow: hidden;
+    height: 50px; /* Высота контейнера */
+}
+
+.text {
+    transform: translateY(100%); /* Начальная позиция текста */
+    opacity: 0; /* Начальная непрозрачность */
+    animation: appear 1s forwards; /* Запуск анимации */
+}
+
+@keyframes appear {
+    to {
+        transform: translateY(0); /* Конечная позиция текста */
+        opacity: 1; /* Конечная непрозрачность */
+    }
+}
+
+    </style>
+    <script>
+        window.onload = function() {
+    const textElement = document.getElementById('text');
+    textElement.classList.add('show'); // Добавляем класс для запуска анимации
+};
+
+    </script>
 </body>
 </html>

@@ -52,3 +52,8 @@ a.forEach(item => {
     cursor.classList.remove('hover');
   });
 })
+
+window.onload = function() {
+  const textElement = document.getElementById('text');
+  textElement.classList.add('show'); // Добавляем класс для запуска анимации
+};

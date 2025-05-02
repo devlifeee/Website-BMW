@@ -51,11 +51,12 @@ body { /* убираются отступы */
     text-decoration: none;
     top: 240px; 
     left: 70px;
-    font-size: 80px;
     font-family:  monospace;
     opacity: 0.9;
-    transition: color 0.6s linear;
-    
+    transition: color 0.6s linear;  
+    transform: translateY(100%); /* Начальная позиция текста */
+  opacity: 0; /* Начальная непрозрачность */
+  animation: appear 1.5s forwards; /* Запуск анимации */ 
 }
 
 text:hover { 
@@ -68,6 +69,13 @@ h1 {
   font-family: monospace;
   font-weight: 400;
   margin-top: -90px;
+}
+
+@keyframes appear {
+  to {
+      transform: translateY(0); /* Конечная позиция текста */
+      opacity: 1; /* Конечная непрозрачность */
+  }
 }
 
 p {

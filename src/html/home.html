@@ -1,71 +1,619 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMW Configurator</title>
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="Webcite icon" type="png"
-    href="img/BMW_2020.png">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap">
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png">
+    <!-- Подключение Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            background-color: rgb(0, 0, 0);
+            -webkit-touch-callout: none; 
+            -webkit-user-select: none; 
+            -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none;
+            overflow-x: hidden;
+            font-family: 'Roboto Mono', monospace;
+            height: 100vh;
+        }
+
+        .header_line {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        .line {
+            position: absolute;
+            width: 90%;
+            height: 1px;  
+            background-color: rgba(255, 255, 255, 0.2); 
+            top: 85px; 
+            left: 5%;
+        }
+        
+        .nav-item {
+            text-decoration: none;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 30px 15px;
+            margin-right: 7px;
+            display: inline-block;
+            transition: all 0.4s ease;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .nav-item:hover {
+            color: rgb(154, 197, 223);
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 25px;
+            left: 15px;
+            width: 0;
+            height: 1px;
+            background: rgb(154, 197, 223);
+            transition: width 0.4s ease;
+        }
+        
+        .nav-item:hover::after {
+            width: calc(100% - 30px);
+        }
+        
+        .header-logo {
+            padding: 12px;
+            margin-left: 60px;
+        }
+        
+        .header-logo img {
+            transition: transform 0.5s ease;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .header-logo img:hover {
+            transform: rotate(360deg);
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 20;
+            width: 90%;
+            max-width: 900px;
+        }
+        
+        .hero-title {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1.2s forwards 0.5s;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .hero-subtitle {
+            color: #ffffff;
+            font-size: 1.8rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1.2s forwards 0.8s;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reg {
+            position: absolute;
+            top: 30px;
+            right: 100px;
+            z-index: 100;
+        }
+        
+        .reg img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .reg img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Стили для 3D контейнера */
+        #model-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        
+        canvas {
+            display: block;
+        }
+        
+        /* Кастомный курсор */
+        .cursor {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 200ms ease-out;
+            position: fixed;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            transform: translate(calc(-50% + 15px), -50%);
+            z-index: 1000;
+        }
+        
+        .cursor2 {
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            transition: width .3s, height .3s, opacity .3s;
+            z-index: 1000;
+        }
+        
+        .hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            opacity: 0.5;
+        }
+        
+        .cursorinnerhover {
+            width: 30px;
+            height: 30px;
+            opacity: .5;
+        }
+        
+        /* Стили для загрузчика */
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+            z-index: 100;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .loader-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .loader-dot {
+            width: 10px;
+            height: 10px;
+            background: #3498db;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        
+        .loader-dot:nth-child(2) {
+            animation-delay: 0.2s;
+            background: #2ecc71;
+        }
+        
+        .loader-dot:nth-child(3) {
+            animation-delay: 0.4s;
+            background: #e74c3c;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.7; }
+        }
+        
+        /* Кнопка "Начать" */
+        .start-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards 1.2s;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .start-btn:hover {
+            background: rgba(154, 197, 223, 0.2);
+            border-color: rgb(154, 197, 223);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .start-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .nav-item {
+                font-size: 16px;
+                padding: 25px 12px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header_line {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header-logo {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            .nav {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .nav-item {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+            
+            .line {
+                top: 140px;
+            }
+            
+            .reg {
+                right: 30px;
+                top: 25px;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .start-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Футер */
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.8rem;
+            z-index: 20;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
     <div class="header">
-      <div class="container">
-        <div class="header_line"> 
-            <div class="header-logo">
-              <img src="img/bmw-logo-14.png"
-               alt="Не удалось загрузить изображение"
-               width="60"
-               height="60"/>
+        <div class="container">
+            <div class="header_line"> 
+                <div class="header-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png"
+                    alt="BMW Logo"/>
+                </div>
+                <div class="line"></div>
+                <nav class="nav">
+                    <a class="nav-item" href="home.html">Home</a>
+                    <a class="nav-item" href="models.html">Models</a>
+                    <a class="nav-item" href="news.html">News</a>
+                </nav> 
             </div>
-            <div class="line"></div>
-              <nav class="nav">
-                <a class="nav-item" href="home.html">Home</a>
-                <a class="nav-item" href="models.html">Models</a>
-               <!-- <a class="nav-item" href="about.html">About BMW</a>-->
-                <a class="nav-item" href="news.html">News</a>
-                <!--<a class="nav-item" href="owners.html">Owners</a>-->
-              </nav> 
-          </div>
-          <div class="reg">
-            <a href="reg.html" target="_blank">
-                <img  src="img/reg icon.png" alt="Не удалось загрузить изображение">
-              </a>
-          </div>
-          <div class="text" id="text">
-                 <p>ВСЕ МЕНЯЕТСЯ,</p> 
-                 <h1>ЛЮБОВЬ К BMW ОСТАЕТСЯ!</h1> 
-          </div>
+            <div class="reg">
+                <a href="reg.html" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Account">
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="cursor"></div>
-      <div class="cursor2"></div>
-
+    </div>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <style>
-        .header { /* изображение */
-    background-image: url("img/2025-BMW-M4-008-1080.jpg"); 
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex; /* Делаем .header элементом Flexbox */   
-}
-      </style>
-      <script src="js\home.js"></script>
-  </body>
+    <div class="hero-content">
+        <div class="hero-title">ВСЕ МЕНЯЕТСЯ,</div>
+        <div class="hero-subtitle">ЛЮБОВЬ К BMW ОСТАЕТСЯ!</div>
+        <button class="start-btn">НАЧАТЬ КОНФИГУРАТОР</button>
+    </div>
+    
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    
+    <div id="model-container"></div>
+    
+    <div id="loader">
+        ЗАГРУЗКА МОДЕЛИ
+        <div class="loader-dots">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        © 2023 BMW Configurator. Все права защищены.
+    </div>
+    
+    <script>
+        // Инициализация 3D сцены
+        let scene, camera, renderer, carModel, controls;
+        let loaderVisible = true;
+        
+        // Показать/скрыть загрузчик
+        function toggleLoader(show) {
+            const loader = document.getElementById('loader');
+            loader.style.display = show ? 'flex' : 'none';
+            loaderVisible = show;
+        }
+        
+        // Инициализация сцены
+        function init() {
+            toggleLoader(true);
+            
+            // Создание сцены
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x000000);
+            
+            // Создание камеры
+            camera = new THREE.PerspectiveCamera(
+                75, 
+                window.innerWidth / window.innerHeight, 
+                0.1, 
+                1000
+            );
+            camera.position.set(0, 0.5, 5); // Увеличено расстояние до камеры
+            
+            // Создание рендерера
+            renderer = new THREE.WebGLRenderer({ 
+                antialias: true,
+                alpha: true,
+                powerPreference: "high-performance" // Для улучшения производительности
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Ограничение для производительности
+            renderer.shadowMap.enabled = true;
+            document.getElementById('model-container').appendChild(renderer.domElement);
+            
+            // Усиленное освещение
+            const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); // Увеличенная интенсивность
+            scene.add(ambientLight);
+            
+            const directionalLight1 = new THREE.DirectionalLight(0xffffff, 2.0); // Более яркий свет
+            directionalLight1.position.set(5, 10, 7);
+            directionalLight1.castShadow = true;
+            scene.add(directionalLight1);
+            
+            const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1.0);
+            directionalLight2.position.set(-5, 5, -5);
+            scene.add(directionalLight2);
+            
+            // Загрузка модели
+            const loader = new THREE.GLTFLoader();
+            
+            // ПРОВЕРЬТЕ ПУТЬ К ФАЙЛУ!
+            loader.load(
+                'html/bmw_m5_cs.glb', // ЗАМЕНИТЕ НА ПРАВИЛЬНЫЙ ПУТЬ
+                (gltf) => {
+                    console.log('Модель успешно загружена!');
+                    carModel = gltf.scene;
+                    scene.add(carModel);
+                    
+                    // Центрирование модели
+                    const box = new THREE.Box3().setFromObject(carModel);
+                    const center = box.getCenter(new THREE.Vector3());
+                    carModel.position.sub(center);
+                    
+                    // Автоматическое масштабирование
+                    const size = box.getSize(new THREE.Vector3());
+                    const maxDim = Math.max(size.x, size.y, size.z);
+                    const scale = 3.0 / maxDim; // Масштабируем так, чтобы самая большая сторона была 3 единицы
+                    carModel.scale.set(scale, scale, scale);
+                    
+                    // Позиционирование
+                    carModel.position.y = -1.0;
+                    
+                    // Включение тени для всех объектов модели
+                    carModel.traverse((child) => {
+                        if (child.isMesh) {
+                            child.castShadow = true;
+                            child.receiveShadow = true;
+                            
+                            // Улучшение материалов
+                            if (child.material) {
+                                child.material.metalness = 0.5;
+                                child.material.roughness = 0.3;
+                            }
+                        }
+                    });
+                    
+                    // Скрыть загрузчик после загрузки
+                    toggleLoader(false);
+                },
+                (xhr) => {
+                    // Прогресс загрузки
+                    const percent = (xhr.loaded / xhr.total * 100).toFixed(0);
+                    console.log(`Загружено: ${percent}%`);
+                },
+                (error) => {
+                    console.error('Ошибка загрузки модели:', error);
+                    toggleLoader(false);
+                    
+                    // Создаем временную модель в случае ошибки
+                    createFallbackModel();
+                }
+            );
+            
+            // Управление камерой
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.minDistance = 2;
+            controls.maxDistance = 15;
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 0.5;
+            
+            // Обработка изменения размера окна
+            window.addEventListener('resize', onWindowResize);
+            
+            // Запуск анимации
+            animate();
+        }
+        
+        function createFallbackModel() {
+            console.log('Создаем временную модель...');
+            const carGroup = new THREE.Group();
+            
+            // Кузов автомобиля
+            const bodyGeometry = new THREE.BoxGeometry(2.5, 0.8, 5);
+            const bodyMaterial = new THREE.MeshPhongMaterial({ 
+                color: 0x0066b3,
+                shininess: 100,
+                specular: 0x1188ff
+            });
+            const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+            body.position.y = -0.5;
+            carGroup.add(body);
+            
+            // Капот
+            const hoodGeometry = new THREE.BoxGeometry(2.5, 0.5, 1.5);
+            const hood = new THREE.Mesh(hoodGeometry, bodyMaterial);
+            hood.position.set(0, 0.1, 1.5);
+            carGroup.add(hood);
+            
+            // Салон
+            const cabinGeometry = new THREE.BoxGeometry(2.0, 0.6, 1.8);
+            const cabin = new THREE.Mesh(cabinGeometry, bodyMaterial);
+            cabin.position.set(0, 0.1, -1.0);
+            carGroup.add(cabin);
+            
+            // Колеса
+            const wheelGeometry = new THREE.CylinderGeometry(0.4, 0.4, 0.3, 32);
+            const wheelMaterial = new THREE.MeshPhongMaterial({ color: 0x222222 });
+            
+            const wheelPositions = [
+                { x: -1.1, y: -0.8, z: 1.7 },
+                { x: 1.1, y: -0.8, z: 1.7 },
+                { x: -1.1, y: -0.8, z: -1.7 },
+                { x: 1.1, y: -0.8, z: -1.7 }
+            ];
+            
+            wheelPositions.forEach(pos => {
+                const wheel = new THREE.Mesh(wheelGeometry, wheelMaterial);
+                wheel.rotation.x = Math.PI / 2;
+                wheel.position.set(pos.x, pos.y, pos.z);
+                carGroup.add(wheel);
+            });
+            
+            scene.add(carGroup);
+            carModel = carGroup;
+        }
+        
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Обновление элементов управления
+            if (controls) {
+                controls.update();
+            }
+            
+            renderer.render(scene, camera);
+        }
+        
+        // Инициализация кастомного курсора
+        const cursor = document.querySelector('.cursor');
+        const cursor2 = document.querySelector('.cursor2');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+            cursor2.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+        });
+        
+        // ... остальной код курсора ...
+        
+        // Запуск при загрузке страницы
+        window.addEventListener('load', init);
+    </script>
+</body>
 </html>

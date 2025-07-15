@@ -145,3 +145,46 @@ p {
   height: 50px;
   opacity: .5;
 }
+
+/* Стили для контейнера модели */
+#model-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Помещаем под основной контент */
+}
+
+/* Дополнительные стили для текста */
+.text {
+    z-index: 10; /* Текст поверх модели */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.text p {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: monospace;
+    z-index: 100;
+}
